@@ -1,0 +1,103 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "C++ build Debug",
+        "command": "${workspaceFolder}/.vscode/build.sh ${workspaceFolder} Debug debug",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "type": "shell",
+        "label": "C++ build Release",
+        "command": "${workspaceFolder}/.vscode/build.sh ${workspaceFolder} Release release",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "type": "shell",
+        "label": "Clean All",
+        "command": "${workspaceFolder}/.vscode/clean.sh ${workspaceFolder}",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "type": "shell",
+        "label": "Export package",
+        "command": "cd ${workspaceFolder}/build && conan export ..",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "type": "shell",
+        "label": "Import Dependencies",
+        "command": "${workspaceFolder}/.vscode/import_deps.sh ${workspaceFolder}",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "type": "shell",
+        "label": "Build - Test - Type=Debug",
+        "command": "${workspaceFolder}/.vscode/build_test.sh ${workspaceFolder}",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      },
+      {
+        "type": "shell",
+        "label": "Release Package",
+        "command": "${workspaceFolder}/.vscode/release_pkg.sh ${workspaceFolder}",
+        "args": [],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": [],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
